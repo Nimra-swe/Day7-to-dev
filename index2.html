@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="morning()">Press me</button>
+    <div id="greeting"></div>
+
+    <div  id="dis" style="height: 200px; width: 300px; background-color: aqua;"></div>
+    <button onclick="Disappear()">Disappear div</button>
+
+    <script>
+        
+    function Disappear() {
+    const mydiv = document.querySelector("#dis");
+    
+    if (mydiv.style.display === "none" ) {
+        mydiv.style.display = "flex";
+    } else {
+        mydiv.style.display = "none";
+    }
+}
+    
+
+
+        function morning(){
+         
+        const name = prompt("Enter your name");
+        const greet = document.querySelector("#greeting");
+        greet.textContent = `${name} you are not a good boy`;
+        }
+
+      
+
+        
+    </script>
+</body>
+</html>

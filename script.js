@@ -32,17 +32,17 @@ console.log(pi);
  console.log(f);
 
  a = 2;
- b = 2;
+ b = 4;
  c = a ** b;
  console.log(c);
 /////////////////
 let counter = 2;
 counter++;
-alert( counter );
+console.log( counter );
 //-----------//
  let num = 2;
  num--;
- alert( num );
+ console.log( num );
 
 
 //  Numbers in javascript
@@ -60,9 +60,17 @@ isNaN(x);
 // basic operators and maths
 let apples = "2";
 let oranges = "3";
-alert( apples + oranges );
+console.log( apples + oranges );
 
 // Assigenment operator
 let u = 3; 
 let v = 4; 
 u = v;
+
+
+let R = 10;
+const PI = 3.1454;
+
+ let Area = 2*PI*R;
+
+ console.log(Area)
