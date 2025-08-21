@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <canvas id="myCanvas"></canvas>
+<div class="circle"></div>
+<div class="circle1"></div>
+<button>Presss</button>
+
+<script>
+document.addEventListener("keydown", (event) => {
+  document.querySelector(".circle").textContent = `You pressed "${event.key}"`;
+});
+
+
+
+  // Setup canvas
+  const canvas = document.getElementById("myCanvas");
+  const ctx = canvas.getContext("2d");
+
+  // Set width and height
+  const WIDTH = (canvas.width = 400);
+  const HEIGHT = (canvas.height = 300);
+
+  // Random function
+  function random(max) {
+    return Math.floor(Math.random() * max);
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, WIDTH, HEIGHT); // clear canvas
+    for (let i = 0; i < 100; i++) {
+      ctx.beginPath();
+      ctx.fillStyle = "rgb(255 0 0 / 50%)"; // red with transparency
+      ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+      ctx.fill();
+    }
+
+    // Example of updating another element
+    let box = document.querySelector(".circle");
+    box.innerHTML = "100 circles drawn!";
+  }
+
+  // Call draw once
+  draw();
+</script>
+
+
+   
+</body>
+</html>
